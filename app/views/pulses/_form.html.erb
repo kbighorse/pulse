@@ -1,0 +1,47 @@
+<% @pulse.tags.build if @pulse.tags.empty? %>
+<% form_for(@pulse) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :synopsis %><br />
+    <%= f.text_field :synopsis %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </p>
+  <p>
+    <%= f.label :published_at %><br />
+    <%= f.date_select :published_at %>
+  </p>
+  <p>
+    <%= f.label :expired_at %><br />
+    <%= f.date_select :expired_at %>
+  </p>
+  <p>
+    <%= f.label :started_at %><br />
+    <%= f.date_select :started_at %>
+  </p>
+  <p>
+    <%= f.label :last_pulsed_at %><br />
+    <%= f.date_select :last_pulsed_at %>
+  </p>
+  <h2>Tags<h2>
+  <% f.fields_for :tags do |tag_form| %>
+    <p>
+      <%= tag_form.label :name, 'Tag:' %>
+      <%= tag_form.text_field :name %>
+    </p>
+    <% unless tag_form.object.nil? || tag_form.object.new_record? %>
+      <%= tag_form.label :_delete, 'Remove' %>
+      <%= tag_form.check_box :_delete %>
+    <% end %>
+  <% end %>
+  <p>
+    <%= f.submit 'Save' %>
+  </p>
+<% end %>

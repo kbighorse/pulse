@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  url_title: MyString
+  external_url: 
+  sitetext_format: MyString
+  sitetext_html: MyText
+  visit_count: 1
+
+two:
+  url_title: MyString
+  external_url: 
+  sitetext_format: MyString
+  sitetext_html: MyText
+  visit_count: 1

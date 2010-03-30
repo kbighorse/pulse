@@ -1,0 +1,32 @@
+<h1>Listing pulses</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Synopsis</th>
+    <th>Description</th>
+    <th>Published at</th>
+    <th>Expired at</th>
+    <th>Started at</th>
+    <th>Last pulsed at</th>
+  </tr>
+
+<% @pulses.each do |pulse| %>
+  <tr>
+    <td><%=h pulse.title %></td>
+    <td><%=h pulse.synopsis %></td>
+    <td><%=h pulse.description %></td>
+    <td><%=h pulse.published_at %></td>
+    <td><%=h pulse.expired_at %></td>
+    <td><%=h pulse.started_at %></td>
+    <td><%=h pulse.last_pulsed_at %></td>
+    <td><%= link_to 'Show', pulse %></td>
+    <td><%= link_to 'Edit', edit_pulse_path(pulse) %></td>
+    <td><%= link_to 'Destroy', pulse, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New pulse', new_pulse_path %>

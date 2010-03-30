@@ -1,0 +1,782 @@
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Rails::InfoController#properties (for 127.0.0.1 at 2010-03-29 16:37:15) [GET]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+Completed in 11ms (View: 1, DB: 1) | 200 OK [http://localhost/rails/info/properties]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-29 16:48:38) [GET]
+
+ActionController::RoutingError (No route matches "/home" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-03-29 16:50:37) [GET]
+Rendering home/index
+Completed in 8ms (View: 7, DB: 0) | 200 OK [http://localhost/home]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-29 16:51:04) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-03-29 16:51:34) [GET]
+Rendering home/index
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (200.3ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (182.4ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreatePulses (20100329235323)
+  [4;35;1mSQL (159.3ms)[0m   [0mCREATE TABLE `pulses` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `synopsis` varchar(255), `description` text, `published_at` date, `expired_at` date, `started_at` date, `last_pulsed_at` date, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100329235323')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mSHOW FIELDS FROM `pulses`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mdescribe `pulses`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `pulses`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PulsesController#index (for 127.0.0.1 at 2010-03-29 17:04:01) [GET]
+  [4;35;1mPulse Load (0.3ms)[0m   [0mSELECT * FROM `pulses` [0m
+Rendering template within layouts/pulses
+Rendering pulses/index
+Completed in 66ms (View: 62, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePulses (20100329235323)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (51.5ms)[0m   [0mSHOW FIELDS FROM `pulses`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mdescribe `pulses`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `pulses`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePulses (20100329235323)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mDROP TABLE `pulses`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20100329235323'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePulses (20100329235323)
+  [4;36;1mSQL (88.1ms)[0m   [0;1mCREATE TABLE `pulses` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `synopsis` varchar(255), `description` text, `published_at` datetime, `expired_at` datetime, `started_at` datetime, `last_pulsed_at` datetime, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (12.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100329235323')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mSHOW FIELDS FROM `pulses`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mdescribe `pulses`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `pulses`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mPulse Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `pulses`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePulses (20100329235323)
+Migrating to CreatePulseWebMetas (20100330003047)
+  [4;36;1mSQL (389.6ms)[0m   [0;1mCREATE TABLE `pulse_web_metas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `url_title` varchar(255), `site_text_format` varchar(255), `sitetext_html` text, `visit_count` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (12.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100330003047')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mSHOW FIELDS FROM `pulse_web_metas`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mdescribe `pulse_web_metas`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `pulse_web_metas`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW FIELDS FROM `pulses`[0m
+  [4;35;1mSQL (347.1ms)[0m   [0mdescribe `pulses`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `pulses`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePulses (20100329235323)
+Migrating to CreatePulseWebMetas (20100330003047)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSHOW FIELDS FROM `pulse_web_metas`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mdescribe `pulse_web_metas`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `pulse_web_metas`[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSHOW FIELDS FROM `pulses`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mdescribe `pulses`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `pulses`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePulses (20100329235323)
+Migrating to CreatePulseWebMetas (20100330003047)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSHOW FIELDS FROM `pulse_web_metas`[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mdescribe `pulse_web_metas`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `pulse_web_metas`[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSHOW FIELDS FROM `pulses`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mdescribe `pulses`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `pulses`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePulseWebMetas (20100330003047)
+  [4;36;1mSQL (0.9ms)[0m   [0;1mDROP TABLE `pulse_web_metas`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20100330003047'[0m
+Migrating to CreatePulses (20100329235323)
+  [4;36;1mSQL (0.7ms)[0m   [0;1mDROP TABLE `pulses`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20100329235323'[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePulses (20100329235323)
+  [4;36;1mSQL (128.8ms)[0m   [0;1mCREATE TABLE `pulses` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `synopsis` varchar(255), `description` text, `published_at` datetime, `expired_at` datetime, `started_at` datetime, `last_pulsed_at` datetime, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (12.5ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100329235323')[0m
+Migrating to CreatePulseWebMetas (20100330003047)
+  [4;36;1mSQL (265.7ms)[0m   [0;1mCREATE TABLE `pulse_web_metas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `url_title` varchar(255), `site_text_format` varchar(255), `sitetext_html` text, `visit_count` int(11), `pulse_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100330003047')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSHOW FIELDS FROM `pulse_web_metas`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mdescribe `pulse_web_metas`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `pulse_web_metas`[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSHOW FIELDS FROM `pulses`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mdescribe `pulses`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW KEYS FROM `pulses`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePulses (20100329235323)
+Migrating to CreatePulseWebMetadatas (20100330003638)
+  [4;36;1mSQL (93.5ms)[0m   [0;1mCREATE TABLE `pulse_web_metadatas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `url_title` varchar(255), `sitetext_format` varchar(255), `sitetext_html` text, `visit_count` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (12.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100330003638')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSHOW FIELDS FROM `pulse_web_metadatas`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mdescribe `pulse_web_metadatas`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `pulse_web_metadatas`[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSHOW FIELDS FROM `pulse_web_metas`[0m
+  [4;35;1mSQL (2.1ms)[0m   [0mdescribe `pulse_web_metas`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW KEYS FROM `pulse_web_metas`[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mSHOW FIELDS FROM `pulses`[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mdescribe `pulses`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `pulses`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PulsesController#index (for 127.0.0.1 at 2010-03-29 17:39:19) [GET]
+  [4;36;1mPulse Load (0.3ms)[0m   [0;1mSELECT * FROM `pulses` [0m
+Rendering template within layouts/pulses
+Rendering pulses/index
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PulsesController#index (for 127.0.0.1 at 2010-03-29 17:42:12) [GET]
+  Parameters: {"has_one"=>:pulse_web_metadata}
+  [4;35;1mPulse Load (0.4ms)[0m   [0mSELECT * FROM `pulses` [0m
+Rendering template within layouts/pulses
+Rendering pulses/index
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PulsesController#new (for 127.0.0.1 at 2010-03-29 17:42:15) [GET]
+  [4;36;1mPulse Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `pulses`[0m
+Rendering template within layouts/pulses
+Rendering pulses/new
+Completed in 114ms (View: 109, DB: 2) | 200 OK [http://localhost/pulses/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PulsesController#create (for 127.0.0.1 at 2010-03-29 17:42:58) [POST]
+  Parameters: {"commit"=>"Create", "pulse"=>{"last_pulsed_at(1i)"=>"2010", "last_pulsed_at(2i)"=>"3", "last_pulsed_at(3i)"=>"30", "title"=>"Test Pulse title", "started_at(1i)"=>"2010", "expired_at(1i)"=>"2010", "started_at(2i)"=>"3", "expired_at(2i)"=>"3", "started_at(3i)"=>"30", "expired_at(3i)"=>"30", "published_at(1i)"=>"2010", "description"=>"get a big discount.", "published_at(2i)"=>"3", "published_at(3i)"=>"30", "synopsis"=>"yo, this is pretty cool"}, "authenticity_token"=>"pglZoNVKbOyc6qkYPzKUck6ebjGNBVc5p79411DOr0U="}
+  [4;35;1mPulse Columns (73.5ms)[0m   [0mSHOW FIELDS FROM `pulses`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPulse Create (0.2ms)[0m   [0mINSERT INTO `pulses` (`updated_at`, `title`, `expired_at`, `description`, `published_at`, `last_pulsed_at`, `synopsis`, `started_at`, `created_at`) VALUES('2010-03-30 00:42:58', 'Test Pulse title', '2010-03-30 00:00:00', 'get a big discount.', '2010-03-30 00:00:00', '2010-03-30 00:00:00', 'yo, this is pretty cool', '2010-03-30 00:00:00', '2010-03-30 00:42:58')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/pulses/1
+Completed in 82ms (DB: 74) | 302 Found [http://localhost/pulses]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PulsesController#show (for 127.0.0.1 at 2010-03-29 17:42:58) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPulse Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `pulses`[0m
+  [4;36;1mPulse Load (0.5ms)[0m   [0;1mSELECT * FROM `pulses` WHERE (`pulses`.`id` = 1) [0m
+Rendering template within layouts/pulses
+Rendering pulses/show
+Completed in 12ms (View: 7, DB: 2) | 200 OK [http://localhost/pulses/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PulsesController#index (for 127.0.0.1 at 2010-03-29 17:43:02) [GET]
+  [4;35;1mPulse Load (0.3ms)[0m   [0mSELECT * FROM `pulses` [0m
+Rendering template within layouts/pulses
+Rendering pulses/index
+  [4;36;1mPulse Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `pulses`[0m
+Completed in 11ms (View: 6, DB: 2) | 200 OK [http://localhost/pulses]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PulsesController#index (for 127.0.0.1 at 2010-03-29 17:47:08) [GET]
+  [4;36;1mPulse Load (0.4ms)[0m   [0;1mSELECT * FROM `pulses` [0m
+Rendering template within layouts/pulses
+Rendering pulses/index
+  [4;35;1mPulse Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `pulses`[0m
+Completed in 94ms (View: 84, DB: 2) | 200 OK [http://localhost/pulses]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PulsesController#new (for 127.0.0.1 at 2010-03-29 17:47:12) [GET]
+  [4;36;1mPulse Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `pulses`[0m
+Rendering template within layouts/pulses
+Rendering pulses/new
+Completed in 26ms (View: 21, DB: 1) | 200 OK [http://localhost/pulses/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePulses (20100329235323)
+Migrating to CreatePulseWebMetadatas (20100330003638)
+Migrating to CreateTags (20100330005152)
+  [4;36;1mSQL (133.0ms)[0m   [0;1mCREATE TABLE `tags` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `post_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (12.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100330005152')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSHOW FIELDS FROM `pulse_web_metadatas`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mdescribe `pulse_web_metadatas`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW KEYS FROM `pulse_web_metadatas`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW FIELDS FROM `pulses`[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mdescribe `pulses`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW KEYS FROM `pulses`[0m
+  [4;35;1mSQL (2.4ms)[0m   [0mSHOW FIELDS FROM `tags`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mdescribe `tags`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `tags`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PulsesController#new (for 127.0.0.1 at 2010-03-29 17:57:49) [GET]
+  [4;35;1mPulse Columns (5.3ms)[0m   [0mSHOW FIELDS FROM `pulses`[0m
+Rendering template within layouts/pulses
+Rendering pulses/new
+Rendered pulses/_form (15.3ms)
+Completed in 65ms (View: 30, DB: 6) | 200 OK [http://localhost/pulses/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PulsesController#index (for 127.0.0.1 at 2010-03-29 17:57:54) [GET]
+  [4;36;1mPulse Load (0.4ms)[0m   [0;1mSELECT * FROM `pulses` [0m
+Rendering template within layouts/pulses
+Rendering pulses/index
+  [4;35;1mPulse Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `pulses`[0m
+Completed in 15ms (View: 8, DB: 2) | 200 OK [http://localhost/pulses]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PulsesController#new (for 127.0.0.1 at 2010-03-29 17:57:56) [GET]
+  [4;36;1mPulse Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `pulses`[0m
+Rendering template within layouts/pulses
+Rendering pulses/new
+Rendered pulses/_form (69.7ms)
+Completed in 77ms (View: 71, DB: 2) | 200 OK [http://localhost/pulses/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PulsesController#index (for 127.0.0.1 at 2010-03-29 17:58:19) [GET]
+  [4;35;1mPulse Load (0.3ms)[0m   [0mSELECT * FROM `pulses` [0m
+Rendering template within layouts/pulses
+Rendering pulses/index
+  [4;36;1mPulse Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `pulses`[0m
+Completed in 12ms (View: 6, DB: 2) | 200 OK [http://localhost/pulses/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PulsesController#show (for 127.0.0.1 at 2010-03-29 17:58:22) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPulse Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `pulses`[0m
+  [4;36;1mPulse Load (0.8ms)[0m   [0;1mSELECT * FROM `pulses` WHERE (`pulses`.`id` = 1) [0m
+Rendering template within layouts/pulses
+Rendering pulses/show
+Completed in 15ms (View: 9, DB: 2) | 200 OK [http://localhost/pulses/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PulsesController#edit (for 127.0.0.1 at 2010-03-29 17:58:25) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPulse Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `pulses`[0m
+  [4;36;1mPulse Load (0.5ms)[0m   [0;1mSELECT * FROM `pulses` WHERE (`pulses`.`id` = 1) [0m
+Rendering template within layouts/pulses
+Rendering pulses/edit
+Rendered pulses/_form (21.2ms)
+Completed in 37ms (View: 30, DB: 2) | 200 OK [http://localhost/pulses/1/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PulsesController#edit (for 127.0.0.1 at 2010-03-29 17:58:27) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPulse Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `pulses`[0m
+  [4;36;1mPulse Load (0.5ms)[0m   [0;1mSELECT * FROM `pulses` WHERE (`pulses`.`id` = 1) [0m
+Rendering template within layouts/pulses
+Rendering pulses/edit
+Rendered pulses/_form (17.9ms)
+Completed in 25ms (View: 19, DB: 2) | 200 OK [http://localhost/pulses/1/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PulsesController#show (for 127.0.0.1 at 2010-03-29 17:58:32) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPulse Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `pulses`[0m
+  [4;36;1mPulse Load (0.3ms)[0m   [0;1mSELECT * FROM `pulses` WHERE (`pulses`.`id` = 1) [0m
+Rendering template within layouts/pulses
+Rendering pulses/show
+Completed in 11ms (View: 4, DB: 2) | 200 OK [http://localhost/pulses/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PulsesController#index (for 127.0.0.1 at 2010-03-29 17:58:34) [GET]
+  [4;35;1mPulse Load (0.3ms)[0m   [0mSELECT * FROM `pulses` [0m
+Rendering template within layouts/pulses
+Rendering pulses/index
+  [4;36;1mPulse Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `pulses`[0m
+Completed in 11ms (View: 6, DB: 2) | 200 OK [http://localhost/pulses]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PulsesController#new (for 127.0.0.1 at 2010-03-29 17:58:37) [GET]
+  [4;35;1mPulse Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `pulses`[0m
+Rendering template within layouts/pulses
+Rendering pulses/new
+Rendered pulses/_form (15.5ms)
+Completed in 22ms (View: 17, DB: 2) | 200 OK [http://localhost/pulses/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PulsesController#new (for 127.0.0.1 at 2010-03-29 17:59:30) [GET]
+  [4;36;1mPulse Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `pulses`[0m
+Rendering template within layouts/pulses
+Rendering pulses/new
+Rendered pulses/_form (57.8ms)
+Completed in 82ms (View: 70, DB: 2) | 200 OK [http://localhost/pulses/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PulsesController#new (for 127.0.0.1 at 2010-03-29 18:22:20) [GET]
+  [4;35;1mPulse Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `pulses`[0m
+Rendering template within layouts/pulses
+Rendering pulses/new
+Rendered pulses/_form (15.7ms)
+Completed in 26ms (View: 20, DB: 2) | 200 OK [http://localhost/pulses/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PulsesController#index (for 127.0.0.1 at 2010-03-29 18:22:24) [GET]
+  [4;36;1mPulse Load (0.3ms)[0m   [0;1mSELECT * FROM `pulses` [0m
+Rendering template within layouts/pulses
+Rendering pulses/index
+  [4;35;1mPulse Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `pulses`[0m
+Completed in 16ms (View: 10, DB: 2) | 200 OK [http://localhost/pulses/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PulsesController#edit (for 127.0.0.1 at 2010-03-29 18:22:26) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPulse Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `pulses`[0m
+  [4;35;1mPulse Load (0.5ms)[0m   [0mSELECT * FROM `pulses` WHERE (`pulses`.`id` = 1) [0m
+Rendering template within layouts/pulses
+Rendering pulses/edit
+Rendered pulses/_form (20.6ms)
+Completed in 35ms (View: 27, DB: 2) | 200 OK [http://localhost/pulses/1/edit]
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PulsesController#index (for 127.0.0.1 at 2010-03-29 18:28:56) [GET]
+  [4;36;1mPulse Load (0.4ms)[0m   [0;1mSELECT * FROM `pulses` [0m
+Rendering template within layouts/pulses
+Rendering pulses/index
+  [4;35;1mPulse Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `pulses`[0m
+Completed in 12ms (View: 6, DB: 3) | 200 OK [http://localhost/pulses]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PulsesController#new (for 127.0.0.1 at 2010-03-29 18:28:58) [GET]
+  [4;36;1mPulse Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `pulses`[0m
+Rendering template within layouts/pulses
+Rendering pulses/new
+  [4;35;1mTag Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `tags`[0m
+DEPRECATION WARNING: _delete is deprecated in nested attributes. Use _destroy instead.. (called from _delete at /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/nested_attributes.rb:263)
+Rendered pulses/_form (22.8ms)
+Completed in 32ms (View: 25, DB: 3) | 200 OK [http://localhost/pulses/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePulses (20100329235323)
+Migrating to CreatePulseWebMetadatas (20100330003638)
+Migrating to CreateTags (20100330013058)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mMysql::Error: Table 'tags' already exists: CREATE TABLE `tags` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `pulse_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePulses (20100329235323)
+Migrating to CreatePulseWebMetadatas (20100330003638)
+Migrating to CreateTags (20100330013058)
+  [4;36;1mSQL (101.4ms)[0m   [0;1mCREATE TABLE `tags` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `pulse_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (12.5ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100330013058')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSHOW FIELDS FROM `pulse_web_metadatas`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mdescribe `pulse_web_metadatas`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `pulse_web_metadatas`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW FIELDS FROM `pulses`[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mdescribe `pulses`[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSHOW KEYS FROM `pulses`[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mSHOW FIELDS FROM `tags`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mdescribe `tags`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `tags`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PulsesController#index (for 127.0.0.1 at 2010-03-29 18:32:01) [GET]
+  [4;36;1mPulse Load (0.3ms)[0m   [0;1mSELECT * FROM `pulses` [0m
+Rendering template within layouts/pulses
+Rendering pulses/index
+  [4;35;1mPulse Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `pulses`[0m
+Completed in 16ms (View: 8, DB: 3) | 200 OK [http://localhost/pulses]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PulsesController#new (for 127.0.0.1 at 2010-03-29 18:32:05) [GET]
+  [4;36;1mPulse Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `pulses`[0m
+Rendering template within layouts/pulses
+Rendering pulses/new
+  [4;35;1mTag Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `tags`[0m
+DEPRECATION WARNING: _delete is deprecated in nested attributes. Use _destroy instead.. (called from _delete at /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/nested_attributes.rb:263)
+Rendered pulses/_form (20.3ms)
+Completed in 27ms (View: 20, DB: 3) | 200 OK [http://localhost/pulses/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PulsesController#new (for 127.0.0.1 at 2010-03-29 18:38:50) [GET]
+  [4;36;1mPulse Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `pulses`[0m
+Rendering template within layouts/pulses
+Rendering pulses/new
+  [4;35;1mTag Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `tags`[0m
+Rendered pulses/_form (25.4ms)
+Completed in 35ms (View: 28, DB: 3) | 200 OK [http://localhost/pulses/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PulsesController#create (for 127.0.0.1 at 2010-03-29 18:39:21) [POST]
+  Parameters: {"commit"=>"Save", "pulse"=>{"tags_attributes"=>{"0"=>{"name"=>"deal"}}, "last_pulsed_at(1i)"=>"2010", "last_pulsed_at(2i)"=>"3", "last_pulsed_at(3i)"=>"30", "title"=>"Another Test", "started_at(1i)"=>"2010", "expired_at(1i)"=>"2010", "started_at(2i)"=>"3", "expired_at(2i)"=>"3", "started_at(3i)"=>"30", "expired_at(3i)"=>"30", "published_at(1i)"=>"2010", "description"=>"save even more", "published_at(2i)"=>"3", "published_at(3i)"=>"30", "synopsis"=>"yo, this is cool too"}, "authenticity_token"=>"pglZoNVKbOyc6qkYPzKUck6ebjGNBVc5p79411DOr0U="}
+  [4;36;1mPulse Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `pulses`[0m
+  [4;35;1mTag Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `tags`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPulse Create (0.3ms)[0m   [0mINSERT INTO `pulses` (`updated_at`, `title`, `expired_at`, `description`, `published_at`, `last_pulsed_at`, `synopsis`, `started_at`, `created_at`) VALUES('2010-03-30 01:39:21', 'Another Test', '2010-03-30 00:00:00', 'save even more', '2010-03-30 00:00:00', '2010-03-30 00:00:00', 'yo, this is cool too', '2010-03-30 00:00:00', '2010-03-30 01:39:21')[0m
+  [4;36;1mTag Create (0.1ms)[0m   [0;1mINSERT INTO `tags` (`name`, `updated_at`, `pulse_id`, `created_at`) VALUES('deal', '2010-03-30 01:39:21', 2, '2010-03-30 01:39:21')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/pulses/2
+Completed in 20ms (DB: 4) | 302 Found [http://localhost/pulses]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PulsesController#show (for 127.0.0.1 at 2010-03-29 18:39:21) [GET]
+  Parameters: {"id"=>"2"}
+
+NoMethodError (undefined method `find_post' for #<PulsesController:0x2598290>):
+  
+
+Rendered rescues/_trace (27.3ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PulsesController#create (for 127.0.0.1 at 2010-03-29 18:39:59) [POST]
+  Parameters: {"commit"=>"Save", "pulse"=>{"tags_attributes"=>{"0"=>{"name"=>"deal"}}, "last_pulsed_at(1i)"=>"2010", "last_pulsed_at(2i)"=>"3", "last_pulsed_at(3i)"=>"30", "title"=>"Another Test", "started_at(1i)"=>"2010", "expired_at(1i)"=>"2010", "started_at(2i)"=>"3", "expired_at(2i)"=>"3", "started_at(3i)"=>"30", "expired_at(3i)"=>"30", "published_at(1i)"=>"2010", "description"=>"save even more", "published_at(2i)"=>"3", "published_at(3i)"=>"30", "synopsis"=>"yo, this is cool too"}, "authenticity_token"=>"pglZoNVKbOyc6qkYPzKUck6ebjGNBVc5p79411DOr0U="}
+  [4;36;1mPulse Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `pulses`[0m
+  [4;35;1mTag Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `tags`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPulse Create (0.5ms)[0m   [0mINSERT INTO `pulses` (`updated_at`, `title`, `expired_at`, `description`, `published_at`, `last_pulsed_at`, `synopsis`, `started_at`, `created_at`) VALUES('2010-03-30 01:39:59', 'Another Test', '2010-03-30 00:00:00', 'save even more', '2010-03-30 00:00:00', '2010-03-30 00:00:00', 'yo, this is cool too', '2010-03-30 00:00:00', '2010-03-30 01:39:59')[0m
+  [4;36;1mTag Create (0.1ms)[0m   [0;1mINSERT INTO `tags` (`name`, `updated_at`, `pulse_id`, `created_at`) VALUES('deal', '2010-03-30 01:39:59', 3, '2010-03-30 01:39:59')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/pulses/3
+Completed in 18ms (DB: 5) | 302 Found [http://localhost/pulses]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PulsesController#show (for 127.0.0.1 at 2010-03-29 18:39:59) [GET]
+  Parameters: {"id"=>"3"}
+
+NoMethodError (undefined method `find_pulse' for #<PulsesController:0x272a748>):
+  
+
+Rendered rescues/_trace (26.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PulsesController#index (for 127.0.0.1 at 2010-03-29 18:41:05) [GET]
+  [4;36;1mPulse Load (0.5ms)[0m   [0;1mSELECT * FROM `pulses` [0m
+Rendering template within layouts/pulses
+Rendering pulses/index
+  [4;35;1mPulse Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `pulses`[0m
+Completed in 19ms (View: 13, DB: 2) | 200 OK [http://localhost/pulses/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PulsesController#new (for 127.0.0.1 at 2010-03-29 18:41:10) [GET]
+  [4;36;1mPulse Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `pulses`[0m
+Rendering template within layouts/pulses
+Rendering pulses/new
+  [4;35;1mTag Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `tags`[0m
+Rendered pulses/_form (74.1ms)
+Completed in 81ms (View: 74, DB: 2) | 200 OK [http://localhost/pulses/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PulsesController#index (for 127.0.0.1 at 2010-03-29 18:41:13) [GET]
+  [4;36;1mPulse Load (0.3ms)[0m   [0;1mSELECT * FROM `pulses` [0m
+Rendering template within layouts/pulses
+Rendering pulses/index
+  [4;35;1mPulse Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `pulses`[0m
+Completed in 18ms (View: 12, DB: 2) | 200 OK [http://localhost/pulses]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PulsesController#edit (for 127.0.0.1 at 2010-03-29 18:41:15) [GET]
+  Parameters: {"id"=>"3"}
+
+NoMethodError (undefined method `find_pulse' for #<PulsesController:0x27bb630>):
+  
+
+Rendered rescues/_trace (29.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PulsesController#edit (for 127.0.0.1 at 2010-03-29 18:42:00) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mPulse Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `pulses`[0m
+  [4;35;1mPulse Load (0.8ms)[0m   [0mSELECT * FROM `pulses` WHERE (`pulses`.`id` = 3) [0m
+Rendering template within layouts/pulses
+Rendering pulses/edit
+  [4;36;1mTag Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `tags`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `tags` WHERE (`tags`.pulse_id = 3) [0m
+  [4;36;1mTag Load (0.3ms)[0m   [0;1mSELECT * FROM `tags` WHERE (`tags`.pulse_id = 3) [0m
+DEPRECATION WARNING: _delete is deprecated in nested attributes. Use _destroy instead.. (called from _delete at /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/nested_attributes.rb:263)
+Rendered pulses/_form (24.2ms)
+Completed in 32ms (View: 24, DB: 4) | 200 OK [http://localhost/pulses/3/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PulsesController#index (for 127.0.0.1 at 2010-03-29 18:42:03) [GET]
+  [4;35;1mPulse Load (0.3ms)[0m   [0mSELECT * FROM `pulses` [0m
+Rendering template within layouts/pulses
+Rendering pulses/index
+  [4;36;1mPulse Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `pulses`[0m
+Completed in 19ms (View: 13, DB: 2) | 200 OK [http://localhost/pulses]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PulsesController#edit (for 127.0.0.1 at 2010-03-29 18:42:11) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mPulse Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `pulses`[0m
+  [4;36;1mPulse Load (0.8ms)[0m   [0;1mSELECT * FROM `pulses` WHERE (`pulses`.`id` = 2) [0m
+Rendering template within layouts/pulses
+Rendering pulses/edit
+  [4;35;1mTag Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `tags`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `tags` WHERE (`tags`.pulse_id = 2) [0m
+  [4;35;1mTag Load (0.4ms)[0m   [0mSELECT * FROM `tags` WHERE (`tags`.pulse_id = 2) [0m
+DEPRECATION WARNING: _delete is deprecated in nested attributes. Use _destroy instead.. (called from _delete at /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/nested_attributes.rb:263)
+Rendered pulses/_form (29.8ms)
+Completed in 39ms (View: 30, DB: 4) | 200 OK [http://localhost/pulses/2/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PulsesController#update (for 127.0.0.1 at 2010-03-29 18:42:18) [PUT]
+  Parameters: {"commit"=>"Save", "pulse"=>{"tags_attributes"=>{"0"=>{"name"=>"event", "_delete"=>"0", "id"=>"1"}}, "last_pulsed_at(1i)"=>"2010", "last_pulsed_at(2i)"=>"3", "last_pulsed_at(3i)"=>"30", "title"=>"Another Test", "started_at(1i)"=>"2010", "expired_at(1i)"=>"2010", "started_at(2i)"=>"3", "expired_at(2i)"=>"3", "started_at(3i)"=>"30", "expired_at(3i)"=>"30", "published_at(1i)"=>"2010", "description"=>"save even more", "published_at(2i)"=>"3", "published_at(3i)"=>"30", "synopsis"=>"yo, this is cool too"}, "authenticity_token"=>"pglZoNVKbOyc6qkYPzKUck6ebjGNBVc5p79411DOr0U=", "id"=>"2"}
+  [4;36;1mPulse Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `pulses`[0m
+  [4;35;1mPulse Load (0.4ms)[0m   [0mSELECT * FROM `pulses` WHERE (`pulses`.`id` = 2) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT * FROM `tags` WHERE (`tags`.pulse_id = 2) [0m
+  [4;35;1mTag Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `tags`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTag Update (0.2ms)[0m   [0mUPDATE `tags` SET `updated_at` = '2010-03-30 01:42:18', `name` = 'event' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/pulses/2
+Completed in 17ms (DB: 4) | 302 Found [http://localhost/pulses/2]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PulsesController#show (for 127.0.0.1 at 2010-03-29 18:42:18) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mPulse Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `pulses`[0m
+  [4;36;1mPulse Load (0.3ms)[0m   [0;1mSELECT * FROM `pulses` WHERE (`pulses`.`id` = 2) [0m
+Rendering template within layouts/pulses
+Rendering pulses/show
+Completed in 13ms (View: 7, DB: 2) | 200 OK [http://localhost/pulses/2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PulsesController#index to xml (for 127.0.0.1 at 2010-03-29 18:43:31) [GET]
+  [4;35;1mPulse Load (3.1ms)[0m   [0mSELECT * FROM `pulses` [0m
+  [4;36;1mPulse Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `pulses`[0m
+Completed in 14ms (View: 5, DB: 4) | 200 OK [http://localhost/pulses.xml]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PulsesController#index to xml (for 127.0.0.1 at 2010-03-29 18:43:43) [GET]
+  [4;35;1mPulse Load (0.4ms)[0m   [0mSELECT * FROM `pulses` [0m
+  [4;36;1mPulse Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `pulses`[0m
+Completed in 11ms (View: 5, DB: 2) | 200 OK [http://localhost/pulses.xml]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PulsesController#index (for 127.0.0.1 at 2010-03-29 18:44:01) [GET]
+  [4;35;1mPulse Load (0.4ms)[0m   [0mSELECT * FROM `pulses` [0m
+Rendering template within layouts/pulses
+Rendering pulses/index
+  [4;36;1mPulse Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `pulses`[0m
+Completed in 22ms (View: 15, DB: 2) | 200 OK [http://localhost/pulses]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PulsesController#destroy (for 127.0.0.1 at 2010-03-29 18:44:08) [DELETE]
+  Parameters: {"authenticity_token"=>"pglZoNVKbOyc6qkYPzKUck6ebjGNBVc5p79411DOr0U=", "id"=>"3"}
+  [4;35;1mPulse Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `pulses`[0m
+  [4;36;1mPulse Load (0.7ms)[0m   [0;1mSELECT * FROM `pulses` WHERE (`pulses`.`id` = 3) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPulse Destroy (0.1ms)[0m   [0;1mDELETE FROM `pulses` WHERE `id` = 3[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/pulses
+Completed in 8ms (DB: 3) | 302 Found [http://localhost/pulses/3]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PulsesController#index (for 127.0.0.1 at 2010-03-29 18:44:08) [GET]
+  [4;36;1mPulse Load (0.3ms)[0m   [0;1mSELECT * FROM `pulses` [0m
+Rendering template within layouts/pulses
+Rendering pulses/index
+  [4;35;1mPulse Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `pulses`[0m
+Completed in 15ms (View: 9, DB: 2) | 200 OK [http://localhost/pulses]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-29 18:47:20) [GET]
+
+ActionController::RoutingError (No route matches "/tags.xml" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PulsesController#index (for 127.0.0.1 at 2010-03-29 19:01:17) [GET]
+  [4;36;1mPulse Load (0.3ms)[0m   [0;1mSELECT * FROM `pulses` [0m
+Rendering template within layouts/pulses
+Rendering pulses/index
+  [4;35;1mPulse Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `pulses`[0m
+Completed in 15ms (View: 9, DB: 3) | 200 OK [http://localhost/]

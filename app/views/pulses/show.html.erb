@@ -1,0 +1,38 @@
+<p>
+  <b>Title:</b>
+  <%=h @pulse.title %>
+</p>
+
+<p>
+  <b>Synopsis:</b>
+  <%=h @pulse.synopsis %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @pulse.description %>
+</p>
+
+<p>
+  <b>Published at:</b>
+  <%=h @pulse.published_at %>
+</p>
+
+<p>
+  <b>Expired at:</b>
+  <%=h @pulse.expired_at %>
+</p>
+
+<p>
+  <b>Started at:</b>
+  <%=h @pulse.started_at %>
+</p>
+
+<p>
+  <b>Last pulsed at:</b>
+  <%=h @pulse.last_pulsed_at %>
+</p>
+
+
+<%= link_to 'Edit', edit_pulse_path(@pulse) %> |
+<%= link_to 'Back', pulses_path %>
